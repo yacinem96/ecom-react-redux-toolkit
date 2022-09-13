@@ -1,0 +1,33 @@
+.content-wraper{
+    height: 100vh;
+}
+
+.sidebar{
+    height: 100vh;
+}
+h5 {
+    color: rgba(211, 162, 37, 0.792);
+}
+ul{
+    list-style: none;
+    
+    
+}
+ul li{
+    font-size: 0.9rem;
+    padding: 5px 0;
+    
+}
+ul li a{
+    color: white;
+    text-decoration: none;
+}
+ul li a:hover{
+    color: rgba(255, 255, 255, 0.664);
+    text-decoration: none;
+}
+
+.content{
+    height: 100vh;
+    padding: 35px;
+}

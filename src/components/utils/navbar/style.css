@@ -1,0 +1,35 @@
+.bi{
+    color: rgb(250, 154, 21);
+}
+.drop a{
+    color:  rgba(255, 255, 255,1)!important ;
+    
+    font-size: 1.5em;
+}
+
+a .dropdown-item{
+    color: black !important;
+}
+
+
+.dropdown-menu a{
+
+    color: black !important;
+    
+}
+
+.cart {
+    font-size: 1.2em !important;
+   color: rgb(255, 255, 255) !important;
+}
+.cart:hover{
+    
+    color: rgba(255, 255, 255, 0.6) !important;
+}
+.cart span{
+    font-size: 0.6em;
+}
+
+ .nav-link {
+    padding: 0.5rem 1rem !important;
+}
