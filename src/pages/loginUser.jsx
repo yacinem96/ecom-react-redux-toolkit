@@ -5,7 +5,7 @@ import { HomeLayout } from '../components/layouts/home'
 export const LoginUser = () => {
   return (
     <HomeLayout>
-        <Login login={"User"}/>
+        <Login login={"User"} />
     </HomeLayout>
   )
 }

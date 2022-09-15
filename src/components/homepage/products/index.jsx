@@ -1,12 +1,14 @@
 import React from 'react'
 import { Container, Row, Col, Spinner } from 'react-bootstrap'
 import { CardOne } from '../../utils/cardOne'
-import { Navigate, useParams } from 'react-router-dom'
+import { toast } from 'react-toastify'
+import { useParams } from 'react-router-dom'
 import useFetch from '../../../hooks/useFetch'
 import "./style.css"
 
 export const Products = () => {
   const params = useParams();
+  const notifyAPI = () => toast.error("ERROR: API not Found ",{theme: "colored"});
   const [data, error, loading] = useFetch(`${!params.category ? 'https://fakestoreapi.com/products' : `https://fakestoreapi.com/products/category/${params.category}`}`)
   return (
 
@@ -15,7 +17,7 @@ export const Products = () => {
 
         <h1 className="m-5 text-center">Our Products</h1>
         <Row className=''>
-          {error && alert("error") & "error"}
+          {error && notifyAPI()}
           {loading &&
             <div className='vh-100 '>
               <div className='loading h-50 w-100'>

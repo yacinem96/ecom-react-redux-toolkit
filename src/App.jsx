@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
+import { ToastContainer,Flip} from 'react-toastify'
 import { PrivateRoute } from "./components/private-route";
 import { HomePage } from './pages';
 import { Admin } from "./pages/admin";
@@ -12,11 +13,13 @@ import { LoginUser } from "./pages/loginUser";
 import RegisterUser from "./pages/registerUser";
 
 function App() {
+
   return (
+<>
 
     <Router>
       <Routes>
-
+        
         <Route path="/" element={<HomePage />} />
         <Route path="/category/:category" element={<CategoryPage />} />
         <Route path="/details/:id" element={
@@ -37,10 +40,24 @@ function App() {
         </Route>
         <Route path="/category/*" element={<PageNotFound />} />
         <Route path="*" element={<PageNotFound/>} />
+  
       </Routes>
     </Router>
+    <ToastContainer
+        position="top-right"
+        autoClose={2000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        transitionn
+      />
+    
 
-
+    </>
   );
 }
 

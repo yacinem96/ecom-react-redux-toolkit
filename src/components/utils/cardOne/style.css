@@ -1,0 +1,9 @@
+p{
+    width: 250px;
+    overflow: hidden;
+    white-space:nowrap;
+    
+}
+.text-over{
+    text-overflow: ellipsis;
+}

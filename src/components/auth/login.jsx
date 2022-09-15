@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
+import { toast } from 'react-toastify'
 import { yupResolver } from "@hookform/resolvers/yup";
 import { loginSchema } from "../../helpers/validation";
 import React from 'react'
@@ -9,7 +10,9 @@ import logImg from "../../images/login.svg"
 import "./style.css"
 export const Login = ({ login }) => {
     const navigate = useNavigate();
-
+    const notify = () => toast.error("Password or UserID inccorect");
+    const notify1 = () => toast.success("Connected successfully");
+    
     const {
         register,
         handleSubmit,
@@ -24,9 +27,10 @@ export const Login = ({ login }) => {
         //// appel le service
         const { email, password } = data;
         if (loginUser({ email, password })) {
+            notify1()
             navigate("/");
         } else {
-            alert("inccorect password");
+            notify()
         }
 
     };
@@ -90,6 +94,7 @@ export const Login = ({ login }) => {
                     </Col>
                 </Row>
             </Container>
+   
         </div>
     )
 }

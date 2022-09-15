@@ -11,6 +11,7 @@ import { totalamount } from '../redux/reducers/cartReducer'
 export const CartPage = () => {
   const cart = useSelector((state) => state.CartReducer.cart)
   const total = useSelector((state) => state.CartReducer.total)
+  
   const disapatch = useDispatch();
   useEffect(() => {
     disapatch(totalamount())
