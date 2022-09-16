@@ -1,5 +1,5 @@
 
-import { Navigate, useParams } from 'react-router-dom'
+import { Navigate, useNavigate, useParams } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
 import { toast } from 'react-toastify'
 import { Button, Col, Container, Row, Spinner } from 'react-bootstrap'
@@ -9,8 +9,9 @@ import useFetch from '../hooks/useFetch'
 
 export const DetailsPage = () => {
     const notify = () => toast.success("Product added with success 👌",{position: "bottom-right"});
-   
+    const token = JSON.parse(localStorage.getItem("user"));
     const dispatch = useDispatch();
+    const navigate=useNavigate();
     const params = useParams();
 
     const [pr, error, loading] = useFetch(`https://fakestoreapi.com/products/${parseInt(params.id)}`)
@@ -40,7 +41,7 @@ export const DetailsPage = () => {
                             <h3> <span className="text-success pb-3 pt-3 ">{pr && pr.price}$</span></h3>
                             <div className="mt-5 ">
                                 <Button className="me-3" variant="outline-primary"><i className="fa-solid fa-cart-arrow-down"></i> Buy now</Button>
-                                <Button variant="warning" onClick={() => {dispatch(addcart({ ...pr, qte: 1 })); notify()}}><i className="fa-solid fa-cart-plus"></i> Add to cart</Button>
+                                <Button variant="warning" onClick={() => {token? dispatch(addcart({...pr,qte:1}))& notify(): navigate("/login")}}><i className="fa-solid fa-cart-plus"></i> Add to cart</Button>
                             </div>
 
                         </Col>

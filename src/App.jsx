@@ -22,11 +22,7 @@ function App() {
         
         <Route path="/" element={<HomePage />} />
         <Route path="/category/:category" element={<CategoryPage />} />
-        <Route path="/details/:id" element={
-          <PrivateRoute>
-            <DetailsPage />
-          </PrivateRoute>
-        } />
+        <Route path="/details/:id" element={ <DetailsPage /> } />
         <Route path="/cart" element={
           <PrivateRoute>
             <CartPage/>

@@ -31,7 +31,7 @@ export const Navb = () => {
               <Nav.Link className='cart' variant="dark  " onClick={() => navigate("/cart")}>
                 <i className="fa-solid fa-cart-shopping "></i>
                 <span style={{ left: "18%", bottom: "5px" }} className="position-relative  translate-middle badge rounded-pill bg-danger">
-                  {cart.length}
+                  {token? cart.length : 0}
 
                 </span>
               </Nav.Link>
