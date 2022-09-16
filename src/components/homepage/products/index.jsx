@@ -31,7 +31,7 @@ export const Products = () => {
 
           {data && data.map((item) => {
             return (
-              <Col key={item.id}>
+              <Col  key={item.id}>
                 <CardOne item={item} />
               </Col>
             )

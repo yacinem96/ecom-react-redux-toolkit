@@ -1,16 +1,31 @@
 .log{
-  
-    width: 380px;
+    width: 90%;
+    max-width: 380px;
     margin: auto;
-    padding: 0 30px;
+    padding: 0 2rem;
     
     background-color: rgba(240, 248, 255, 0.101);
     border-radius: 20px;
 }
 
+.imglog{
+    width: 90%;
+    display: block;
+    margin: auto;
+    max-height:400px
+    
+}
+.imgreg{
+    width: 90%;
+    display: block;
+    margin: auto;
+    max-height:460px
+    
+}
+
 .reg{
     margin-top: 20px;
-    padding: 0 25%;
+    
     color: azure;
     cursor: pointer;
 
@@ -34,9 +49,11 @@
 
 .register{
     margin: 10px auto !important;
-    width: 500px;
+    width: 80%;
+    max-width: 500px;
+    min-width: 300px !important;
     margin: auto;
-    padding: 0 30px;
+    padding: 0 1.8rem;
     
     background-color: rgba(240, 248, 255, 0.101);
     border-radius: 20px;

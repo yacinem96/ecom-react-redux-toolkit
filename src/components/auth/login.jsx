@@ -40,15 +40,15 @@ export const Login = ({ login }) => {
             <Container fluid>
                 <Row>
 
-                    <Col className='p-5 ' lg={6} md={12} sm={12}>
-                        <img src={logImg} height="400" alt="loginImg" />
+                    <Col className='p-3 m-auto 'xl={6} lg={12} md={12} sm={12}>
+                        <img className="imglog" src={logImg}  alt="loginImg" />
                     </Col>
 
 
-                    <Col lg={6} md={12} sm={12} className="p-3 ">
+                    <Col xl={6} lg={12} md={12} sm={12} className="p-3 ">
 
                         <div className='log align-self-center pb-5 shadow'>
-                            <h1 className='text-white text-center p-5'>{login} Login</h1>
+                            <h1 className='text-white text-center pt-5 pb-5'>{login} Login</h1>
                             <Form onSubmit={handleSubmit(onSubmit)} >
                                 <Form.Group className="mb-3" controlId="formBasicEmail">
                                     <FloatingLabel
@@ -84,7 +84,7 @@ export const Login = ({ login }) => {
                                         Login
                                     </Button>
                                 </div>
-                                <div className="reg">
+                                <div className="reg text-center mt-4">
                                     <p  onClick={() => navigate("/register") }>create a new account</p>
                                 </div>
 

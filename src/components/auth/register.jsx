@@ -8,9 +8,9 @@ export const Register = () => {
     <div >
       <Container fluid className='bg-dark'>
         <Row>
-          <Col md={12} lg={6}  >
+          <Col md={12} lg={12} xl={6} >
             <div className='register align-self-center pb-5 shadow'>
-              <h1 className='text-white text-center p-5'>Sign Up</h1>
+              <h1 className='text-white text-center pt-5 pb-5'>Sign Up</h1>
               <Form  >
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                   <div className='d-flex align-items-center '>
@@ -70,8 +70,8 @@ export const Register = () => {
           </Col>
 
 
-          <Col md={12} lg={6} className="p-5">
-            <img src={img} alt="img" width="460px" />
+          <Col md={12} lg={12} xl={6} className="p-2 m-auto">
+            <img className='imgreg' src={img} alt="img" />
           </Col>
         </Row>
       </Container>

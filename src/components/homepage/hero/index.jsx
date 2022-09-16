@@ -9,14 +9,14 @@ export const Hero = () => {
            
             <Container  >
                 <Row >
-                    <Col md={12} lg={6} className=" p-5 ">
+                    <Col md={12} lg={6} className="p-lg-5 p-md-5  p-sm-3 p-5 ">
                         <h1 className=" ">{heroInfo[0].title}</h1>
                         <p>{heroInfo[0].description}</p>
                        <Button href='#products' style={{backgroundColor:"rgb(250, 154, 21)"}}>Visit product</Button>
                         
                     </Col>
-                    <Col lg={6} md={12} className="p-5" >
-                        <img src={img1} alt="img" width="530px"/>
+                    <Col  md={12} lg={6} className="p-lg-5 p-md-5  p-sm-3" >
+                        <img className='imghero m-auto d-block' src={img1} alt="img" />
                     </Col>
                 </Row>
             </Container>
