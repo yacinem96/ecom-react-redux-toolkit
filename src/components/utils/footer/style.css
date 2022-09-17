@@ -1,4 +1,7 @@
-i:hover{
+.fab{
+    font-size: 1.75rem;
+}
+.fab:hover{
     transform: scale(1.15);
 }
 .fa-facebook:hover{

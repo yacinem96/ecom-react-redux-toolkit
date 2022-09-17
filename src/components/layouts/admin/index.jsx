@@ -14,7 +14,7 @@ import "./style.css"
               <ul className='ps-3'>
                 <h5 >MAIN MENU</h5>
                
-                <li><Link to="products"><i className="fa-solid fa-square-poll-horizontal"></i> DASHBOARD</Link></li>
+                <li><Link to="products"><i class="fa-solid fa-table-list"></i> DASHBOARD</Link></li>
               </ul>
               <ul className='ps-3'>
                 <h5>LIST MENU</h5>

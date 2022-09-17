@@ -14,13 +14,13 @@ export const CardOne = ({item}) => {
 
   return (
     <>
-   <Card className="mb-2 text-start shadow m-auto" style={{ width: '18rem' }}>
+   <Card className="mb-2  shadow m-auto" style={{ width: '18rem' }}>
       <Card.Img className="p-3" variant="top" style={{height:"220px"}} src={item.image}/>
       <Card.Body>
         <Card.Title ><p >{item.title}</p></Card.Title>
         
-        <Card.Text >
-        <h5 className="text-success ">{item.price}$</h5>
+        <Card.Text className="h4 text-success pb-2 ">
+        {item.price}$
         </Card.Text>
         <Button variant='success' onClick={()=>{token? dispatch(addcart({...item,qte:1}))& notify(): navigate('/login')}}><i className="fa-solid fa-cart-plus"></i> add to cart</Button>
         <Button className='float-end ' variant='warning'  onClick={()=>navigate(`/details/${item.id}`)} ><i className="fa-solid fa-circle-info"></i> Details</Button>

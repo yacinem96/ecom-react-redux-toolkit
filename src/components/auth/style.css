@@ -1,9 +1,9 @@
 .log{
     width: 90%;
     max-width: 380px;
+   
     margin: auto;
     padding: 0 2rem;
-    
     background-color: rgba(240, 248, 255, 0.101);
     border-radius: 20px;
 }
@@ -12,7 +12,7 @@
     width: 90%;
     display: block;
     margin: auto;
-    max-height:400px
+    max-height:480px
     
 }
 .imgreg{
@@ -50,6 +50,7 @@
 .register{
     margin: 10px auto !important;
     width: 80%;
+
     max-width: 500px;
     min-width: 300px !important;
     margin: auto;
@@ -57,5 +58,5 @@
     
     background-color: rgba(240, 248, 255, 0.101);
     border-radius: 20px;
-    min-width: 350px;
+   
 }

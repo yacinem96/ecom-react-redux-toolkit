@@ -21,12 +21,13 @@ export const CardCart = ({ item }) => {
               <Card.Title>{item.title}</Card.Title>
               <Card.Text >
                 <h6 className="text-secondary ">Qte: {item.qte}</h6>
-                <h4 className="text-success "> {item.price}$</h4>
+                <h4 className="text-success h3 "> {item.price}$</h4>
               </Card.Text>
               <div className='mt-xs-5 mt-sm-3 mt-md-3 mt-lg-0 mt-xl-4 mt-3'>
                 <Button variant='outline-danger float-end' onClick={() => {dispatch(removecart(item.id));notify()}} ><i className="fa-solid fa-trash-can"></i> Remove</Button>
-                <Button variant="success " onClick={() => dispatch(pluscart(item.id))}><i class="fa-solid fa-plus"></i></Button>
-                <Button variant="danger " onClick={() => dispatch(minuscart(item))}><i class="fa-solid fa-minus"></i></Button>
+                <Button variant="white h1 text-bold text-danger" style={{fontSize:"1.2rem"}} onClick={() => dispatch(minuscart(item))}><i className=" fa-solid fa-minus"></i></Button>
+                <span className='h3 p2 '> {item.qte} </span>
+                <Button variant=" h1 text-bold text-success" style={{fontSize:"1.2rem"}} onClick={() => dispatch(pluscart(item.id))}><i className="fa-solid fa-plus"></i></Button>
               </div>
             </Card.Body>
           </Col>
