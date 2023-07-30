@@ -7,9 +7,10 @@ import useFetch from '../../../hooks/useFetch'
 import "./style.css"
 
 export const Products = () => {
+  const url = 'http://127.0.0.1:2211/api'
   const params = useParams();
   const notifyAPI = () => toast.error("ERROR: API not Found ",{theme: "colored"});
-  const [data, error, loading] = useFetch(`${!params.category ? 'https://fakestoreapi.com/products' : `https://fakestoreapi.com/products/category/${params.category}`}`)
+  const [data, error, loading] = useFetch(`${!params.category ? url+'/products' : `https://fakestoreapi.com/products/category/${params.category}`}`)
   return (
 
     <>
@@ -31,7 +32,7 @@ export const Products = () => {
 
           {data && data.map((item) => {
             return (
-              <Col  key={item.id}>
+              <Col  key={item._id}>
                 <CardOne item={item} />
               </Col>
             )

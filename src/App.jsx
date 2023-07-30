@@ -3,6 +3,7 @@ import { ToastContainer,Flip} from 'react-toastify'
 import { PrivateRoute } from "./components/private-route";
 import { HomePage } from './pages';
 import { Admin } from "./pages/admin";
+import MainDash from "./pages/admin/main";
 import AdminProducts from "./pages/admin/product";
 import AdminUsers from "./pages/admin/users";
 import { CartPage } from "./pages/cart";
@@ -30,7 +31,8 @@ function App() {
         } />
         <Route path="/login" element={<LoginUser />} />
         <Route path="/register" element={<RegisterUser/> } />
-        <Route path="/admin" element={<Admin />}>
+        <Route path="/admin" element={<Admin />} >
+          <Route path="main" element={<MainDash/> }/>
           <Route path="products" element={<AdminProducts/> }/>
           <Route path="users" element={<AdminUsers />} />
         </Route>

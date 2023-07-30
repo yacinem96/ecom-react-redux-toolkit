@@ -1,9 +1,10 @@
 .content-wraper{
-    height: 100vh;
+    min-height: calc(100vh - 10%);
+    
 }
 
 .sidebar{
-    height: 100vh;
+    min-height: calc(100vh - 10%);
 }
 h5 {
     color: rgba(211, 162, 37, 0.792);
@@ -28,6 +29,13 @@ ul li a:hover{
 }
 
 .content{
-    height: 100vh;
-    padding: 35px;
+    min-height: calc(100vh - 10vh);
+    background-color: rgba(255, 255, 255, 0.943);
+    
 }
+ .icon2{
+   font-size: 2.5em !important;
+   padding: 2px !important;
+   color: aliceblue !important;
+   background-color: rgba(0, 255, 255, 0) !important;
+ }

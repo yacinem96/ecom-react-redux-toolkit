@@ -12,7 +12,7 @@ const cartSlice = createSlice({
         
 
             const exist = state.cart.find((item) => {
-                return item.id === payload.id
+                return item._id === payload._id
             })
 
             if (exist) {
@@ -20,7 +20,7 @@ const cartSlice = createSlice({
                 console.log("if exist");
                 console.log("payload qte ="+ payload.qte);
                 const newcart=state.cart.map((item) => {
-                    if (item.id === payload.id) {
+                    if (item._id === payload._id) {
                         
                         item.qte++
                         console.log('====================================');
@@ -37,14 +37,14 @@ const cartSlice = createSlice({
         removecart: (state, { payload }) => {
             return {
                 ...state, cart: state.cart.filter((item) => {
-                    return item.id !== payload
+                    return item._id !== payload
                 })
             }
         },
         pluscart: (state, { payload }) => {
                 
                  state.cart= state.cart.map((item) => {
-                    if (item.id === payload) {
+                    if (item._id === payload) {
 
                         return {...item,qte:item.qte+1} 
                         
@@ -56,11 +56,11 @@ const cartSlice = createSlice({
 
                 if (payload.qte===1) {
                      state.cart=state.cart.filter((item) => {
-                        return item.id !== payload.id
+                        return item._id !== payload._id
                     })
                 } else {
                     state.cart= state.cart.map((item) => {
-                        if (item.id === payload.id) {
+                        if (item._id === payload._id) {
     
                             return {...item,qte:item.qte-1} 
                         } return item

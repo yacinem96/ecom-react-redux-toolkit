@@ -1,14 +1,14 @@
 import React from 'react'
-import { NavLink, useNavigate } from 'react-router-dom';
+import { NavLink, useNavigate ,useLocation } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { Container, Nav, Navbar, Form } from 'react-bootstrap';
 import NavDropdown from 'react-bootstrap/NavDropdown';
-import { logout } from '../../../services/auth.service';
-
+import { logoutUser } from '../../../services/auth.service';
 import { navItems } from '../../../data';
 import './style.css'
 
 export const Navb = () => {
+  const location=useLocation()
   const navigate = useNavigate();
   const token = JSON.parse(localStorage.getItem("user"));
   const cart = useSelector((state) => state.CartReducer.cart)
@@ -39,8 +39,8 @@ export const Navb = () => {
 
             {token ? <div >
 
-              <NavDropdown className='drop text-white' title={<span>user <i className="fa-solid fa-circle-user  "></i></span>} id="basic-nav-dropdown">
-                <NavDropdown.Item onClick={logout} href="/">Logout</NavDropdown.Item>
+              <NavDropdown className='drop text-white' title={<span>{ JSON.parse(localStorage.getItem("user")).username || "user" } <i className="fa-solid fa-circle-user  "></i></span>} id="basic-nav-dropdown">
+                <NavDropdown.Item onClick={logoutUser} href="/">Logout</NavDropdown.Item>
                 <NavDropdown.Item href="/profile">     Profile   </NavDropdown.Item>
 
               </NavDropdown>

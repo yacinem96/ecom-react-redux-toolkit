@@ -11,7 +11,6 @@ export const CardOne = ({item}) => {
   const dispatch=useDispatch();
   const token = JSON.parse(localStorage.getItem("user"));
   const notify = () => toast.success("Product added with success 👌",{position: "bottom-right"});
-
   return (
     <>
    <Card className="mb-2  shadow m-auto" style={{ width: '18rem' }}>
@@ -23,7 +22,7 @@ export const CardOne = ({item}) => {
         {item.price}$
         </Card.Text>
         <Button variant='success' onClick={()=>{token? dispatch(addcart({...item,qte:1}))& notify(): navigate('/login')}}><i className="fa-solid fa-cart-plus"></i> add to cart</Button>
-        <Button className='float-end ' variant='warning'  onClick={()=>navigate(`/details/${item.id}`)} ><i className="fa-solid fa-circle-info"></i> Details</Button>
+        <Button className='float-end ' variant='warning'  onClick={()=>navigate(`/details/${item._id}`)} ><i className="fa-solid fa-circle-info"></i> Details</Button>
       </Card.Body>
     </Card>
     </>

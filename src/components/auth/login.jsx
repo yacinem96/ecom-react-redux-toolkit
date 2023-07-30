@@ -10,9 +10,6 @@ import logImg from "../../images/login.svg"
 import "./style.css"
 export const Login = ({ login }) => {
     const navigate = useNavigate();
-    const notify = () => toast.error("Password or UserID inccorect");
-    const notify1 = () => toast.success("Connected successfully");
-    
     const {
         register,
         handleSubmit,
@@ -26,12 +23,11 @@ export const Login = ({ login }) => {
         console.log(data);
         //// appel le service
         const { email, password } = data;
-        if (loginUser({ email, password })) {
-            notify1()
-            navigate("/");
-        } else {
-            notify()
-        }
+        if (loginUser({ email, password })===true) {
+            setTimeout(() => {
+                navigate("/", {state:{id:email.split("@")[0]}});
+            }, 500); 
+        } 
 
     };
 
@@ -54,9 +50,10 @@ export const Login = ({ login }) => {
                                     <FloatingLabel
                                         controlId="floatingInput"
                                         label="Email address"
+                                        
 
                                     >
-                                        <Form.Control type="email" placeholder="name@example.com"
+                                        <Form.Control type="text" placeholder="name@example.com"
                                             {...register("email")} />
                                     </FloatingLabel>
 
